@@ -16,13 +16,11 @@
     }
   },
   "files": [
-    "dist",
-    "dist/H264Decoder.js",
-    "dist/worker/H264DecoderWorker.js"
+    "dist"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup && mkdir -p dist/worker && cp src/H264Decoder.js dist/ && cp src/worker/H264DecoderWorker.js dist/worker/",
+    "build": "tsup && node scripts/patch-esm-extensions.cjs && mkdir -p dist/util dist/worker && cp -R src/util/*.js dist/util/ && cp src/H264Decoder.js dist/ && cp src/worker/H264DecoderWorker.js dist/worker/",
     "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
     "clean": "rm -rf dist",
     "prepare": "npm run clean && npm run build"
@@ -41,6 +39,8 @@
     "clean": true,
     "treeshake": true,
     "minify": false,
+    "bundle" : true,
+    "splitting" : false,
     "skipNodeModulesBundle": true
   },
   "keywords": [],
