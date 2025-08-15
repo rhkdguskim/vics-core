@@ -1,6 +1,6 @@
 {
   "name": "@rhkdguskim/vicscoreclientlib",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
