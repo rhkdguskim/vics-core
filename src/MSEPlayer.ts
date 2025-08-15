@@ -1,6 +1,6 @@
-import EventEmitter from "./util/EventEmitter";
-import BufferController from "./controller/buffer";
-import * as debug from "./util/debug";
+import EventEmitter from "./util/EventEmitter.js";
+import BufferController from "./controller/buffer.js";
+import * as debug from "./util/debug.js";
 
 /** 플레이어 동작 모드 */
 export type PlayerMode = "video" | "audio" | "both";

@@ -1,4 +1,4 @@
-import EventEmiiter from "../util/EventEmitter";
+import EventEmiiter from "../util/EventEmitter.js";
 import {
   LinkAddDiskReq,
   LinkDelDiskReq,

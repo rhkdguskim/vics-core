@@ -1,5 +1,5 @@
-import * as debug from "../util/debug";
-import EventEmitter from "../util/EventEmitter";
+import * as debug from "../util/debug.js";
+import EventEmitter from "../util/EventEmitter.js";
 import { appendByteArray } from "../util/utils.js";
 
 export default class BufferController extends EventEmitter {

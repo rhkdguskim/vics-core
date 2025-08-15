@@ -1,4 +1,4 @@
-import * as debug from "../util/debug";
+import * as debug from "../util/debug.js";
 import { AACParser } from "../parsers/aac.js";
 import { BaseRemuxer } from "./base.js";
 

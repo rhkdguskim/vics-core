@@ -1,4 +1,4 @@
-import * as debug from "../util/debug";
+import * as debug from "../util/debug.js";
 
 export class AACParser {
   static aacHeader;

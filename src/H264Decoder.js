@@ -1,6 +1,6 @@
-import EventEmitter from "./util/EventEmitter";
-import RemuxController from "./controller/remux";
-import * as debug from "./util/debug";
+import EventEmitter from "./util/EventEmitter.js";
+import RemuxController from "./controller/remux.js";
+import * as debug from "./util/debug.js";
 import { NALU } from "./util/nalu.js";
 import { appendByteArray } from "./util/utils.js";
 import { H264Parser } from "./parsers/h264.js";

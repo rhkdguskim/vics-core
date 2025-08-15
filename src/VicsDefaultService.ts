@@ -7,7 +7,7 @@ import {
 import { LinkKeepaliveReq, LinkLoginReq } from "./types/linksystem";
 import CryptoJS from "crypto-js";
 import { LINKPROTO, MILINKUSERSTREAM } from "./const";
-import EventEmiiter from "./util/EventEmitter";
+import EventEmiiter from "./util/EventEmitter.js";
 
 const DEFAULT_RECONNECT_TIME = 5000;
 const KEEP_ALIVE = 10000;

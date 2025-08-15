@@ -1,4 +1,4 @@
-import * as debug from "../util/debug";
+import * as debug from "../util/debug.js";
 import { H264Parser } from "../parsers/h264.js";
 import { BaseRemuxer } from "./base.js";
 

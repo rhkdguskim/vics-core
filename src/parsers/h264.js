@@ -1,6 +1,6 @@
 import { ExpGolomb } from "../util/exp-golomb.js";
 import { NALU } from "../util/nalu.js";
-import * as debug from "../util/debug";
+import * as debug from "../util/debug.js";
 
 export class H264Parser {
   static extractNALu(buffer) {

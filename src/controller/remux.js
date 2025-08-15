@@ -1,9 +1,9 @@
-import * as debug from "../util/debug";
+import * as debug from "../util/debug.js";
 import { MP4 } from "../util/mp4-generator.js";
 import { AACRemuxer } from "../remuxer/aac.js";
 import { H264Remuxer } from "../remuxer/h264.js";
 import { appendByteArray, secToTime } from "../util/utils.js";
-import EventEmitter from "../util/EventEmitter";
+import EventEmitter from "../util/EventEmitter.js";
 
 export default class RemuxController extends EventEmitter {
   constructor(env) {

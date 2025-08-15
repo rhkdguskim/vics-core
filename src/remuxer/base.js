@@ -1,5 +1,3 @@
-import * as debug from "../util/debug";
-
 let track_id = 1;
 export class BaseRemuxer {
   static getTrackID() {
