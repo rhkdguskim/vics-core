@@ -121,6 +121,18 @@ export interface DiskDto {
   record_path: string;
 }
 
+export interface AddDiskRequestDto {
+  disk : DiskDto
+}
+
+export interface DelDiskRequestDto {
+  strId : string
+}
+export interface UpdateDiskRequestDto {
+  strId : string,
+  nLimit : number
+}
+
 const toDiskDto = (item: VidDisk): DiskDto => {
   const {
     strId,
@@ -139,6 +151,27 @@ const toDiskDto = (item: VidDisk): DiskDto => {
     stor_limit: nStorLimit ? nStorLimit : 0,
     free_size: nFreeSize ? nFreeSize : 0,
     record_path: strRecordPath,
+  };
+};
+
+const toVidDisk = (dto: DiskDto): VidDisk => {
+  const {
+    id,
+    path,
+    total_size,
+    stor_used,
+    stor_limit,
+    free_size,
+    record_path,
+  } = dto;
+  return {
+    strId: id,
+    strPath: path,
+    nTotalSize: total_size ?? 0,
+    nStorUsed: stor_used ?? 0,
+    nStorLimit: stor_limit ?? 0,
+    nFreeSize: free_size ?? 0,
+    strRecordPath: record_path,
   };
 };
 
@@ -714,9 +747,10 @@ export default class VicsDataService extends VicsDefaultService {
     this.sendMessage(request);
   }
 
-  AddDisk(data: LinkAddDiskReq) {
+  AddDisk(data: AddDiskRequestDto) {
+    
     const addDiskReq: LinkAddDiskReq = {
-      ...data,
+      cDisk : toVidDisk(data.disk),
     };
 
     const request: VICSDataRequest = {
@@ -727,9 +761,9 @@ export default class VicsDataService extends VicsDefaultService {
     this.sendMessage(request);
   }
 
-  DeleteDisk(data: LinkDelDiskReq) {
+  DeleteDisk(data: DelDiskRequestDto) {
     const delDiskReq: LinkDelDiskReq = {
-      ...data,
+      strId : data.strId
     };
 
     const request: VICSDataRequest = {
@@ -740,9 +774,10 @@ export default class VicsDataService extends VicsDefaultService {
     this.sendMessage(request);
   }
 
-  UpdateDisk(data: LinkUpdateDiskLimitReq) {
+  UpdateDisk(data : UpdateDiskRequestDto) {
     const diskLimitReq: LinkUpdateDiskLimitReq = {
-      ...data,
+      strId :data.strId,
+      nLimit : data.nLimit
     };
 
     const request: VICSDataRequest = {
