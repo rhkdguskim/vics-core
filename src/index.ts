@@ -6,3 +6,5 @@ export { default as MSEPlayer } from "./MSEPlayer";
 export * from "./VicsDataService";
 export * from "./VicsStreamService";
 export * from "./MSEPlayer";
+export * from "./test/FakeDataService"
+export * from "./test/FakeStreamService"
