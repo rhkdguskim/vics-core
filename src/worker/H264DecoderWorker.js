@@ -1,4 +1,4 @@
-import H264Decoder from "../H264Decoder";
+import H264Decoder from "../H264Decoder.js";
 
 let decoder;
 
