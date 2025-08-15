@@ -17,11 +17,12 @@
   },
   "files": [
     "dist",
+    "dist/H264Decoder.js",
     "dist/worker/H264DecoderWorker.js"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup && mkdir -p dist/worker && cp src/worker/H264DecoderWorker.js dist/worker/",
+    "build": "tsup && mkdir -p dist/worker && cp src/H264Decoder.js dist/ && cp src/worker/H264DecoderWorker.js dist/worker/",
     "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
     "clean": "rm -rf dist",
     "prepare": "npm run clean && npm run build"
