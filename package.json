@@ -1,6 +1,6 @@
 {
   "name": "@rhkdguskim/vicscoreclientlib",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "type": "module",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -39,8 +39,8 @@
     "clean": true,
     "treeshake": true,
     "minify": false,
-    "bundle" : true,
-    "splitting" : false,
+    "bundle": true,
+    "splitting": false,
     "skipNodeModulesBundle": true
   },
   "keywords": [],
