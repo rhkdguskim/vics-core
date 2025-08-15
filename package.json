@@ -1,19 +1,23 @@
 {
   "name": "@mirero/vicscoreclientlib",
-  "version": "1.0.0",
-  "type": "module", 
-  "publishConfig": { "registry": "https://registry.npmjs.org/" },
+  "version": "1.0.1",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-    "exports": {
+  "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
@@ -21,9 +25,14 @@
     "clean": "rm -rf dist",
     "prepare": "npm run clean && npm run build"
   },
-    "tsup": {
-    "entry": ["src/index.ts"],
-    "format": ["esm", "cjs"],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs"
+    ],
     "outDir": "dist",
     "sourcemap": true,
     "dts": true,
