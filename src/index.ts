@@ -5,6 +5,9 @@ export { default as MSEPlayer } from "./MSEPlayer";
 
 export * from "./VicsDataService";
 export * from "./VicsStreamService";
+export * from "./VicsApiService";
 export * from "./MSEPlayer";
 export * from "./test/FakeDataService"
 export * from "./test/FakeStreamService"
+
+export {cameraTypeFromJSON, CameraType} from "./types/vidconf"
