@@ -5,7 +5,7 @@ import {
   linkCmdTypeToJSON,
 } from "./types/linkproto";
 import { LinkKeepaliveReq, LinkLoginReq } from "./types/linksystem";
-import CryptoJS from "crypto-js";
+import * as CryptoJS from "crypto-js";
 import { LINKPROTO, MILINKUSERSTREAM } from "./const";
 import EventEmiiter from "./util/EventEmitter.js";
 
