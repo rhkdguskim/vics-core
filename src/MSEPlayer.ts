@@ -63,10 +63,10 @@ export default class MSEPlayer extends EventEmitter {
 
     if (this.options.debug) debug.setLogger();
 
-    // 디코더 워커 초기화 (원본과 동일 경로 규칙 유지)
-    this.decoderWorker = new Worker(
-      new URL("./worker/H264DecoderWorker.js", import.meta.url),
-    );
+    this.decoderWorker = new Worker(new URL('./worker/H264DecoderWorker.js', 
+      import.meta.url),
+     { type: 'module' });
+
     this.decoderWorker.postMessage({
       command: "init",
       options: {
