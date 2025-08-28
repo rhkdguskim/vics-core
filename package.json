@@ -1,5 +1,5 @@
 {
-  "name": "@rhkdguskim/vicscoreclientlib",
+  "name": "vics-core",
   "version": "1.0.20",
   "type": "module",
   "publishConfig": {
