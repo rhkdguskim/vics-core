@@ -1,5 +1,5 @@
 import EventEmiiter from "../util/EventEmitter.js";
-import { VicsVideoStreamService } from "../VicsStreamService";
+import { VicsVideoStreamService } from "../VicsStreamService.js";
 
 type FrameData = (data: CustomEvent<Uint8Array>) => void;
 type Time = (time: CustomEvent<Date>) => void;

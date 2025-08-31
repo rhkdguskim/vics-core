@@ -3,7 +3,7 @@ import {
   LinkAddDiskReq,
   LinkDelDiskReq,
   LinkUpdateDiskLimitReq,
-} from "../types/linksystem";
+} from "../types/linksystem.js";
 import {
   AddCameraRequestDto,
   CameraDto,
@@ -18,8 +18,8 @@ import {
   SearchCameraDto,
   StreamInfoDto,
   VicCamChangeType,
-} from "../VicsDataService";
-import { CameraType } from "../types/vidconf";
+} from "../VicsDataService.js";
+import { CameraType } from "../types/vidconf.js";
 import uuid from "react-uuid";
 
 const mockCameras: CameraDto[] = [

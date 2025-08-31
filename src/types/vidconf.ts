@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as _m0 from "protobufjs/minimal.js";
+import * as _m0 from "protobufjs/minimal";
 import Long from "long";
 
 export const protobufPackage = "";
