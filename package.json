@@ -20,7 +20,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "dev": " mkdir -p dist/util dist/worker dist/controller dist/parsers dist/remuxer && cp -R src/util/*.js dist/util/ 2>/dev/null || true && cp -R src/controller/*.js dist/controller/ 2>/dev/null || true && cp -R src/parsers/*.js dist/parsers/ 2>/dev/null || true && cp -R src/remuxer/*.js dist/remuxer/ 2>/dev/null || true && cp src/H264Decoder.js dist/ 2>/dev/null || true && cp src/worker/H264DecoderWorker.js dist/worker/ 2>/dev/null || true && tsup --watch",
+    "copy:static": "mkdir -p dist/util dist/worker dist/controller dist/parsers dist/remuxer && cp -R src/util/*.js dist/util/ 2>/dev/null || true && cp -R src/controller/*.js dist/controller/ 2>/dev/null || true && cp -R src/parsers/*.js dist/parsers/ 2>/dev/null || true && cp -R src/remuxer/*.js dist/remuxer/ 2>/dev/null || true && cp src/H264Decoder.js dist/ 2>/dev/null || true && cp src/worker/H264DecoderWorker.js dist/worker/ 2>/dev/null || true",
+    "dev": "tsup --watch --onSuccess \"npm run copy:static\"",
     "build": "tsup && mkdir -p dist/util dist/worker dist/controller dist/parsers dist/remuxer && cp -R src/util/*.js dist/util/ 2>/dev/null || true && cp -R src/controller/*.js dist/controller/ 2>/dev/null || true && cp -R src/parsers/*.js dist/parsers/ 2>/dev/null || true && cp -R src/remuxer/*.js dist/remuxer/ 2>/dev/null || true && cp src/H264Decoder.js dist/ 2>/dev/null || true && cp src/worker/H264DecoderWorker.js dist/worker/ 2>/dev/null || true",
     "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
     "clean": "rm -rf dist",
